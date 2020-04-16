@@ -1,0 +1,28 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница!</title>
+    {%load staticfiles%}
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css">
+
+  </head>
+  <body>
+    <div class="container-fluid" style="background-color: #FFD700">
+
+    <h1 align="center">
+
+    <span class="badge badge-dark"> <a  style="color: white" href="/">BookExcange</a> </span></h1>
+
+
+      <p ><h3 style="color: dark">Добро пожаловать!</h3></p>
+      <p style="color: white"><h4>На сайте вы сможете найти интересную книгу.</h4></p>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+    <script src="{% static 'js/jquery-3.5.0.min.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+  </body>
+</html>

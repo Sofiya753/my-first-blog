@@ -1,0 +1,17 @@
+{% extends 'mainApp/wrapper.html' %}
+{% block content %}
+<body>
+
+{% for post in object_list %}
+
+  <img src="{{ post.image.url}}" alt="{{ post.title }}">
+   <a href="/ad/{{post.id}}"><h3>{{post.title}}</h3></a>
+   <h4 >{{post.author}}</h4>
+   <h5 >{{post.text}}</h5>
+   <p></p>
+
+
+{% endfor %}
+
+</body>
+{% endblock %}

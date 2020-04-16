@@ -1,0 +1,11 @@
+{% extends 'mainApp/wrapper.html' %}
+{% block content %}
+<body>
+ <img src="{{ ad.image.url}}" alt="{{ post.title }}">
+<h2 class="text-info"> Название: {{ad.title}}</h2>
+<h3 > Автор: {{ad.author}}</h3>
+<h4>Город: {{ad.location}}</h4>
+<h4>Дополнительная информация: {{ad.text}}</h4>
+<h5>Опубликовано: {{ad.date}}</h5>
+</body>
+{% endblock %}
