@@ -1,17 +1,40 @@
 {% extends 'mainApp/wrapper.html' %}
 {% block content %}
-<body>
+<head>
+  <title>Объявления</title>
+  <style >
+    .center {
+      margin: 20px;
+      color: white;
+    }
+  </style>
+</head>
+<body  >
 
+
+
+<div class="row">
 {% for post in object_list %}
 
-  <img src="{{ post.image.url}}" alt="{{ post.title }}">
-   <a href="/ad/{{post.id}}"><h3>{{post.title}}</h3></a>
-   <h4 >{{post.author}}</h4>
-   <h5 >{{post.text}}</h5>
-   <p></p>
-
-
+  <div class="col-md-6 ">
+    <div class="card mb-4" style="background: #696969 max-width: 540px;">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img src="{{ post.image.url}}" alt="{{ post.title }}" class="img-thumbnail rounded float-right card-img-top">
+        </div>
+          <div class="col-md-6 ">
+            <div class="card-body  ">
+              <h5 class="card-title"><strong>{{post.title}}</strong></h5>
+              <h5 class="card-text">{{post.author}}</h5>
+              <p class="card-text">{{post.text}}</p>
+              <a href="/ad/{{post.id}}" class="btn btn-secondary">Посмотреть объявление</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
 {% endfor %}
+</div>
 
 </body>
 {% endblock %}
